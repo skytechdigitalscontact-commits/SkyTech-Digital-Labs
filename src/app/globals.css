@@ -1,0 +1,48 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply bg-background text-neutral-900 leading-relaxed antialiased;
+    @apply dark:bg-slate-900 dark:text-slate-100;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-bold tracking-tight text-navy-900;
+    @apply dark:text-white;
+  }
+}
+
+@layer utilities {
+  .btn-primary {
+    @apply bg-gradient-button text-white px-6 py-3 rounded-full font-medium hover:opacity-90 transition-opacity shadow-md hover:shadow-lg inline-flex items-center justify-center;
+  }
+
+  .btn-secondary {
+    @apply bg-white text-navy-500 border border-navy-500 px-6 py-3 rounded-full font-medium hover:bg-neutral-50 transition-colors inline-flex items-center justify-center;
+    @apply dark:bg-slate-800 dark:text-slate-200 dark:border-slate-600 dark:hover:bg-slate-700;
+  }
+
+  .glass-card {
+    @apply bg-white/80 backdrop-blur-md border border-neutral-100 rounded-2xl shadow-sm hover:shadow-md transition-shadow;
+    @apply dark:bg-slate-800/80 dark:border-slate-700 dark:shadow-slate-900/50;
+  }
+
+  /* Premium luxury gradients */
+  .premium-gradient {
+    @apply bg-gradient-to-br from-white via-neutral-50 to-neutral-100;
+    @apply dark:from-slate-900 dark:via-slate-800 dark:to-slate-900;
+  }
+
+  .premium-glow {
+    @apply shadow-[0_0_40px_rgba(37,99,235,0.15)];
+    @apply dark:shadow-[0_0_40px_rgba(37,99,235,0.25)];
+  }
+
+  .premium-border {
+    @apply border border-neutral-200/50;
+    @apply dark:border-slate-700/50;
+  }
+}
+
